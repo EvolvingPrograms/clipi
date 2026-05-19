@@ -20,8 +20,8 @@ describe("prettyFormat", () => {
       { date: "2024-02-01", value: 2 },
     ])
 
-    expect(out).toMatch(/^┌.*┐\n/)
-    expect(out).toMatch(/└.*┘\n$/)
+    expect(out).toMatch(/^╭.*╮\n/)
+    expect(out).toMatch(/╰.*╯\n$/)
     expect(out).toContain("date")
     expect(out).toContain("2024-01-01")
     expect(out).toContain("2024-02-01")
@@ -104,7 +104,7 @@ describe("prettyFormat", () => {
     ])
 
     // Still a table, not util.inspect.
-    expect(out).toMatch(/^┌/)
+    expect(out).toMatch(/^╭/)
     expect(out).toContain("id")
     expect(out).toContain("schedules")
     // Nested array represented compactly.
@@ -115,7 +115,7 @@ describe("prettyFormat", () => {
   test("array of non-objects/non-scalars (e.g. nested arrays) → util.inspect fallback", () => {
     const out = prettyFormat([[1, 2], [3, 4]])
     // No top-level table — these aren't tabular.
-    expect(out).not.toMatch(/^┌/)
+    expect(out).not.toMatch(/^╭/)
     expect(out).toContain("1")
     expect(out).toContain("4")
   })

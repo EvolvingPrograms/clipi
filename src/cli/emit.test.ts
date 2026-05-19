@@ -71,7 +71,7 @@ describe("emit", () => {
   // assertion just checks that the value made it into the
   // rendered output via the table renderer.
   const expectsTable = (out: string, content: string): void => {
-    expect(out).toMatch(/^┌/)
+    expect(out).toMatch(/^╭/)
     expect(out).toContain(content)
   }
 

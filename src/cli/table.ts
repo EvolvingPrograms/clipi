@@ -28,10 +28,14 @@ import stringWidth from "string-width"
 
 import { bold, colorize } from "./ansi"
 
+// Rounded corners — softens the visual weight, matches how most
+// modern CLIs render tables (gh, ripgrep --json | jq -C, etc.).
+// Inner tees and lines stay sharp; only the four outer corners
+// change.
 const BOX = {
-  top: { l: "┌", r: "┐", x: "┬", h: "─" },
+  top: { l: "╭", r: "╮", x: "┬", h: "─" },
   mid: { l: "├", r: "┤", x: "┼", h: "─" },
-  bot: { l: "└", r: "┘", x: "┴", h: "─" },
+  bot: { l: "╰", r: "╯", x: "┴", h: "─" },
   v: "│",
 }
 

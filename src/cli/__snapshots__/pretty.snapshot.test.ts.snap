@@ -5,19 +5,19 @@ exports[`prettyPrint — rendered snapshots FRED observations (mixed: scalars + 
 count: 3
 
 observations:
-┌───┬────────────┬───────────┐
+╭───┬────────────┬───────────╮
 │   │ \x1B[1mdate\x1B[0m       │ \x1B[1mvalue\x1B[0m     │
 ├───┼────────────┼───────────┤
 │ \x1B[1m0\x1B[0m │ \x1B[36m2016-01-01\x1B[0m │ \x1B[33m18525.933\x1B[0m │
 │ \x1B[1m1\x1B[0m │ \x1B[36m2016-04-01\x1B[0m │ \x1B[33m18711.702\x1B[0m │
 │ \x1B[1m2\x1B[0m │ \x1B[36m2016-07-01\x1B[0m │ \x1B[33m18892.639\x1B[0m │
-└───┴────────────┴───────────┘
+╰───┴────────────┴───────────╯
 
 "
 `;
 
 exports[`prettyPrint — rendered snapshots FRED meta (flat object) 1`] = `
-"┌──────────────────┬────────────────────────┐
+"╭──────────────────┬────────────────────────╮
 │                  │ \x1B[1mValue\x1B[0m                  │
 ├──────────────────┼────────────────────────┤
 │ \x1B[1mid\x1B[0m               │ GDP                    │
@@ -25,38 +25,38 @@ exports[`prettyPrint — rendered snapshots FRED meta (flat object) 1`] = `
 │ \x1B[1mfrequency\x1B[0m        │ Quarterly              │
 │ \x1B[1munits\x1B[0m            │ Billions of Dollars    │
 │ \x1B[1mobservationStart\x1B[0m │ \x1B[36m1947-01-01\x1B[0m             │
-└──────────────────┴────────────────────────┘
+╰──────────────────┴────────────────────────╯
 "
 `;
 
 exports[`prettyPrint — rendered snapshots market-stats returns (primitive array) 1`] = `
-"┌───┬───────┐
+"╭───┬───────╮
 │   │ \x1B[1mValue\x1B[0m │
 ├───┼───────┤
 │ \x1B[1m0\x1B[0m │ \x1B[33m0.1\x1B[0m   │
 │ \x1B[1m1\x1B[0m │ \x1B[33m-0.1\x1B[0m  │
 │ \x1B[1m2\x1B[0m │ \x1B[33m0.05\x1B[0m  │
-└───┴───────┘
+╰───┴───────╯
 "
 `;
 
 exports[`prettyPrint — rendered snapshots yahoo chart (meta first, quotes second — insertion order) 1`] = `
 "meta:
-┌────────────────────┬────────┐
+╭────────────────────┬────────╮
 │                    │ \x1B[1mValue\x1B[0m  │
 ├────────────────────┼────────┤
 │ \x1B[1msymbol\x1B[0m             │ SPY    │
 │ \x1B[1mcurrency\x1B[0m           │ USD    │
 │ \x1B[1mregularMarketPrice\x1B[0m │ \x1B[33m739.17\x1B[0m │
-└────────────────────┴────────┘
+╰────────────────────┴────────╯
 
 quotes:
-┌───┬────────────┬────────┬────────┐
+╭───┬────────────┬────────┬────────╮
 │   │ \x1B[1mdate\x1B[0m       │ \x1B[1mopen\x1B[0m   │ \x1B[1mclose\x1B[0m  │
 ├───┼────────────┼────────┼────────┤
 │ \x1B[1m0\x1B[0m │ \x1B[36m2024-01-02\x1B[0m │ \x1B[33m472.16\x1B[0m │ \x1B[33m472.65\x1B[0m │
 │ \x1B[1m1\x1B[0m │ \x1B[36m2024-01-03\x1B[0m │ \x1B[33m470.43\x1B[0m │ \x1B[33m468.79\x1B[0m │
-└───┴────────────┴────────┴────────┘
+╰───┴────────────┴────────┴────────╯
 
 "
 `;
@@ -67,43 +67,43 @@ name: Apple Inc.
 tickers: AAPL
 
 filings:
-┌───┬──────┬────────────┬──────────────────────┐
+╭───┬──────┬────────────┬──────────────────────╮
 │   │ \x1B[1mform\x1B[0m │ \x1B[1mfilingDate\x1B[0m │ \x1B[1maccessionNumber\x1B[0m      │
 ├───┼──────┼────────────┼──────────────────────┤
 │ \x1B[1m0\x1B[0m │ 10-K │ \x1B[36m2025-10-31\x1B[0m │ 0000320193-25-000079 │
 │ \x1B[1m1\x1B[0m │ 10-Q │ \x1B[36m2026-01-30\x1B[0m │ 0000320193-26-000010 │
-└───┴──────┴────────────┴──────────────────────┘
+╰───┴──────┴────────────┴──────────────────────╯
 
 "
 `;
 
 exports[`prettyPrint — rendered snapshots yahoo multi-quote (map of flat records → single combined table) 1`] = `
-"┌─────┬────────────────────┬────────────────────────────┐
+"╭─────┬────────────────────┬────────────────────────────╮
 │     │ \x1B[1mregularMarketPrice\x1B[0m │ \x1B[1mregularMarketChangePercent\x1B[0m │
 ├─────┼────────────────────┼────────────────────────────┤
 │ \x1B[1mSPY\x1B[0m │ \x1B[33m739.17\x1B[0m             │ \x1B[33m0.42\x1B[0m                       │
 │ \x1B[1mQQQ\x1B[0m │ \x1B[33m538.1\x1B[0m              │ \x1B[33m0.31\x1B[0m                       │
-└─────┴────────────────────┴────────────────────────────┘
+╰─────┴────────────────────┴────────────────────────────╯
 "
 `;
 
 exports[`prettyPrint — rendered snapshots market-stats drawdown (scalars trail nested objects) 1`] = `
 "current:
-┌───────┬───────┐
+╭───────┬───────╮
 │       │ \x1B[1mValue\x1B[0m │
 ├───────┼───────┤
 │ \x1B[1mi\x1B[0m     │ \x1B[33m4\x1B[0m     │
 │ \x1B[1mprice\x1B[0m │ \x1B[33m95\x1B[0m    │
 │ \x1B[1mdd\x1B[0m    │ \x1B[33m-0.05\x1B[0m │
-└───────┴───────┘
+╰───────┴───────╯
 
 max:
-┌────┬───────┐
+╭────┬───────╮
 │    │ \x1B[1mValue\x1B[0m │
 ├────┼───────┤
 │ \x1B[1mi\x1B[0m  │ \x1B[33m3\x1B[0m     │
 │ \x1B[1mdd\x1B[0m │ \x1B[33m-0.3\x1B[0m  │
-└────┴───────┘
+╰────┴───────╯
 
 peakIdx: 0
 recoveryIdx: null
@@ -117,49 +117,49 @@ title: Press Releases
 link: https://www.sec.gov/
 
 items:
-┌───┬────────────┬─────────────┬──────────────────────┐
+╭───┬────────────┬─────────────┬──────────────────────╮
 │   │ \x1B[1mtitle\x1B[0m      │ \x1B[1mlink\x1B[0m        │ \x1B[1mpubDate\x1B[0m              │
 ├───┼────────────┼─────────────┼──────────────────────┤
 │ \x1B[1m0\x1B[0m │ Headline A │ \x1B]8;;https://...\x1B\\https://...\x1B]8;;\x1B\\ │ \x1B[36m2026-05-19T11:00:00Z\x1B[0m │
 │ \x1B[1m1\x1B[0m │ Headline B │ \x1B]8;;https://...\x1B\\https://...\x1B]8;;\x1B\\ │ \x1B[36m2026-05-18T11:00:00Z\x1B[0m │
-└───┴────────────┴─────────────┴──────────────────────┘
+╰───┴────────────┴─────────────┴──────────────────────╯
 
 "
 `;
 
 exports[`prettyPrint — rendered snapshots array of non-flat objects (util.inspect fallback) 1`] = `
-"┌───┬──────────────────┐
+"╭───┬──────────────────╮
 │   │ \x1B[1mnested\x1B[0m           │
 ├───┼──────────────────┤
 │ \x1B[1m0\x1B[0m │ { deep, deeper } │
-└───┴──────────────────┘
+╰───┴──────────────────╯
 "
 `;
 
 exports[`prettyPrint — rendered snapshots briefing list (mixed-shape array, nested arrays as compact placeholders) 1`] = `
 "items:
-┌───┬────────────────────────┬────────────────┬────────┬─────────────────────────┬─────────────────────────┬───────────┐
+╭───┬────────────────────────┬────────────────┬────────┬─────────────────────────┬─────────────────────────┬───────────╮
 │   │ \x1B[1mid\x1B[0m                     │ \x1B[1mname\x1B[0m           │ \x1B[1mstatus\x1B[0m │ \x1B[1mdescription\x1B[0m             │ \x1B[1mtopic\x1B[0m                   │ \x1B[1mschedules\x1B[0m │
 ├───┼────────────────────────┼────────────────┼────────┼─────────────────────────┼─────────────────────────┼───────────┤
 │ \x1B[1m0\x1B[0m │ 6113f4d0-6b19-4168-9f… │ Regime Signals │ active │ Weekly statistical rea… │ # Market Regime & Outl… │ [2 items] │
 │ \x1B[1m1\x1B[0m │ a1b2c3d4-...           │ Daily Macro    │ paused │ Single short brief at…  │ Closing-price macro br… │ [0 items] │
-└───┴────────────────────────┴────────────────┴────────┴─────────────────────────┴─────────────────────────┴───────────┘
+╰───┴────────────────────────┴────────────────┴────────┴─────────────────────────┴─────────────────────────┴───────────╯
 
 "
 `;
 
 exports[`prettyPrint — rendered snapshots array of objects with one nested field (the listBriefingsCmd raw shape) 1`] = `
-"┌───┬────┬───────┬────────┬───────────┐
+"╭───┬────┬───────┬────────┬───────────╮
 │   │ \x1B[1mid\x1B[0m │ \x1B[1mname\x1B[0m  │ \x1B[1mstatus\x1B[0m │ \x1B[1mschedules\x1B[0m │
 ├───┼────┼───────┼────────┼───────────┤
 │ \x1B[1m0\x1B[0m │ a  │ Alpha │ active │ [1 items] │
 │ \x1B[1m1\x1B[0m │ b  │ Beta  │ draft  │ [0 items] │
-└───┴────┴───────┴────────┴───────────┘
+╰───┴────┴───────┴────────┴───────────╯
 "
 `;
 
 exports[`prettyPrint — rendered snapshots edgar-filings read (long body + long URL, the original repro) 1`] = `
-"┌────────────┬──────────────────────────────────────────────────────────────────────────────────┐
+"╭────────────┬──────────────────────────────────────────────────────────────────────────────────╮
 │            │ \x1B[1mValue\x1B[0m                                                                            │
 ├────────────┼──────────────────────────────────────────────────────────────────────────────────┤
 │ \x1B[1mticker\x1B[0m     │ AAPL                                                                             │
@@ -169,6 +169,6 @@ exports[`prettyPrint — rendered snapshots edgar-filings read (long body + long
 │ \x1B[1mfilingDate\x1B[0m │ \x1B[36m2023-11-03\x1B[0m                                                                       │
 │ \x1B[1mraw\x1B[0m        │ \x1B[35mfalse\x1B[0m                                                                            │
 │ \x1B[1mbody\x1B[0m       │ Item 1. ⏎ Business ⏎ Apple Inc., designs, manufactures, and market… [+282 chars] │
-└────────────┴──────────────────────────────────────────────────────────────────────────────────┘
+╰────────────┴──────────────────────────────────────────────────────────────────────────────────╯
 "
 `;

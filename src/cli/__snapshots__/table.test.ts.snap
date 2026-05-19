@@ -1,52 +1,52 @@
 // Bun Snapshot v1, https://bun.sh/docs/test/snapshots
 
 exports[`renderObjectTable flat key/value object → 2-column vertical table 1`] = `
-"┌───────────┬───────────┐
+"╭───────────┬───────────╮
 │           │ \x1B[1mValue\x1B[0m     │
 ├───────────┼───────────┤
 │ \x1B[1mid\x1B[0m        │ GDP       │
 │ \x1B[1mfrequency\x1B[0m │ Quarterly │
-└───────────┴───────────┘
+╰───────────┴───────────╯
 "
 `;
 
 exports[`renderArrayTable array of flat objects → header row + index column 1`] = `
-"┌───┬────────────┬───────┐
+"╭───┬────────────┬───────╮
 │   │ \x1B[1mdate\x1B[0m       │ \x1B[1mvalue\x1B[0m │
 ├───┼────────────┼───────┤
 │ \x1B[1m0\x1B[0m │ \x1B[36m2024-01-01\x1B[0m │ \x1B[33m1\x1B[0m     │
 │ \x1B[1m1\x1B[0m │ \x1B[36m2024-02-01\x1B[0m │ \x1B[33m2\x1B[0m     │
-└───┴────────────┴───────┘
+╰───┴────────────┴───────╯
 "
 `;
 
 exports[`renderArrayTable array of primitives → single Values column 1`] = `
-"┌───┬───────┐
+"╭───┬───────╮
 │   │ \x1B[1mValue\x1B[0m │
 ├───┼───────┤
 │ \x1B[1m0\x1B[0m │ \x1B[33m0.1\x1B[0m   │
 │ \x1B[1m1\x1B[0m │ \x1B[33m-0.1\x1B[0m  │
 │ \x1B[1m2\x1B[0m │ \x1B[33m0.05\x1B[0m  │
-└───┴───────┘
-"
-`;
-
-exports[`renderMapTable map of flat records → outer keys as left col, inner keys as headers 1`] = `
-"┌─────┬────────┬────────┐
-│     │ \x1B[1mprice\x1B[0m  │ \x1B[1mchange\x1B[0m │
-├─────┼────────┼────────┤
-│ \x1B[1mSPY\x1B[0m │ \x1B[33m739.17\x1B[0m │ \x1B[33m0.42\x1B[0m   │
-│ \x1B[1mQQQ\x1B[0m │ \x1B[33m538.1\x1B[0m  │ \x1B[33m0.31\x1B[0m   │
-└─────┴────────┴────────┘
+╰───┴───────╯
 "
 `;
 
 exports[`renderArrayTable non-uniform keys → union of keys, blanks where missing 1`] = `
-"┌───┬───┬───┬───┐
+"╭───┬───┬───┬───╮
 │   │ \x1B[1ma\x1B[0m │ \x1B[1mb\x1B[0m │ \x1B[1mc\x1B[0m │
 ├───┼───┼───┼───┤
 │ \x1B[1m0\x1B[0m │ \x1B[33m1\x1B[0m │ \x1B[33m2\x1B[0m │   │
 │ \x1B[1m1\x1B[0m │ \x1B[33m3\x1B[0m │   │ \x1B[33m4\x1B[0m │
-└───┴───┴───┴───┘
+╰───┴───┴───┴───╯
+"
+`;
+
+exports[`renderMapTable map of flat records → outer keys as left col, inner keys as headers 1`] = `
+"╭─────┬────────┬────────╮
+│     │ \x1B[1mprice\x1B[0m  │ \x1B[1mchange\x1B[0m │
+├─────┼────────┼────────┤
+│ \x1B[1mSPY\x1B[0m │ \x1B[33m739.17\x1B[0m │ \x1B[33m0.42\x1B[0m   │
+│ \x1B[1mQQQ\x1B[0m │ \x1B[33m538.1\x1B[0m  │ \x1B[33m0.31\x1B[0m   │
+╰─────┴────────┴────────╯
 "
 `;
