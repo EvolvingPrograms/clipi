@@ -1,6 +1,6 @@
 {
   "name": "@evolvingprograms/clipi",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "Schema-driven API client + auto-generated CLI. One zod schema → typed client + generic `api <endpoint>` subcommand + ergonomic `defineCommand` wrappers.",
   "type": "module",
   "main": "./src/index.ts",
