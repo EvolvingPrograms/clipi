@@ -90,6 +90,20 @@ describe("emit", () => {
     expectsTable(stdout.join(""), "true")
   })
 
+  test("pretty output ends with a trailing blank line", () => {
+    emit({ ok: true }, { mode: "pretty" })
+    // Human mode pads with a blank line so successive invocations
+    // have breathing room in the terminal.
+    expect(stdout.join("").endsWith("\n\n")).toBe(true)
+  })
+
+  test("json output ends with a single newline (no padding for pipes)", () => {
+    emit({ ok: true }, { mode: "json" })
+    const out = stdout.join("")
+    expect(out.endsWith("\n")).toBe(true)
+    expect(out.endsWith("\n\n")).toBe(false)
+  })
+
   // ---- built-in default ----------------------------------------------------
 
   test("no options + no env defaults to pretty", () => {

@@ -277,4 +277,42 @@ describe("createCli — command dispatch", () => {
     expect(apiCmd).toBeDefined()
     expect(apiCmd?.commands.map((c) => c.name())).toEqual(["foo"])
   })
+
+  // --- trailing blank line between successive invocations ---
+
+  test("--help output ends with a trailing blank line", () => {
+    const cli = createCli({ name: "test-cli", description: "test", commands: [] })
+    cli.program.outputHelp()
+    const out = stdout.join("")
+    expect(out.length).toBeGreaterThan(0)
+    // commander's help already ends with one "\n"; our writeOut hook
+    // adds a second so there's a blank line before the next prompt.
+    expect(out.endsWith("\n\n")).toBe(true)
+    expect(out.endsWith("\n\n\n")).toBe(false)
+  })
+
+  test("bare invocation (no subcommand) shows help on stderr with a trailing blank line", async () => {
+    const echo = defineCommand({
+      name: "echo",
+      schema: z.object({ value: z.string() }),
+      positional: ["value"],
+      handler: ({ value }) => ({ value }),
+    })
+    const cli = createCli({ name: "test-cli", description: "test", commands: [echo] })
+
+    // Commander prints help to stderr and calls process.exit(1); our
+    // stub turns that into a throw.
+    let threw: unknown
+    try {
+      await runCli(cli, [])
+    } catch (e) {
+      threw = e
+    }
+    expect(threw).toBeInstanceOf(Error)
+    expect((threw as Error).message).toBe("__exit_1__")
+    const err = stderr.join("")
+    expect(err.length).toBeGreaterThan(0)
+    expect(err.endsWith("\n\n")).toBe(true)
+    expect(err.endsWith("\n\n\n")).toBe(false)
+  })
 })

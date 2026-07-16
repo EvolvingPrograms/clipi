@@ -53,7 +53,17 @@ function applyCommanderOptions(
 
   program.configureHelp(help)
 
-  if (opts?.configureOutput) program.configureOutput(opts.configureOutput)
+  // Append a trailing blank line to commander-managed output so
+  // successive CLI invocations don't butt up against each other in a
+  // terminal. `writeOut` carries `--help`/`--version`; `writeErr`
+  // carries help shown on a bare invocation (no subcommand) and
+  // parse errors. Caller-provided hooks win wholesale — if they take
+  // over a stream, spacing is theirs to decide.
+  program.configureOutput({
+    writeOut: (str) => process.stdout.write(str + "\n"),
+    writeErr: (str) => process.stderr.write(str + "\n"),
+    ...(opts?.configureOutput ?? {}),
+  })
   if (opts?.exitOverride === true) program.exitOverride()
   else if (typeof opts?.exitOverride === "function") program.exitOverride(opts.exitOverride)
   if (opts?.helpOption !== undefined) {

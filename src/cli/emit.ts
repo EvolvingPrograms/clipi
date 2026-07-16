@@ -68,11 +68,16 @@ function resolveMode(opts: EmitOptions): EmitMode {
 export function emit(value: unknown, opts: EmitOptions = {}): void {
   const mode = resolveMode(opts)
   if (mode === "json") {
+    // Machine mode: exactly one trailing newline, nothing to pad —
+    // downstream pipes want clean JSON.
     process.stdout.write(JSON.stringify(value) + "\n")
     return
   }
 
+  // Human mode: end with a single blank line so successive CLI
+  // invocations have breathing room in the terminal.
   prettyPrint(value)
+  process.stdout.write("\n")
 }
 
 export function mapError(
